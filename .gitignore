@@ -1,21 +1,11 @@
-# Package Managers
-yarn.lock
 node_modules
 
-# Editor Configs
-.idea
-.vscode
+.cache
+.env
+.output
 .DS_Store
 
-# Miscelaneous
-/.cache
-/build
+/build/
 /public/build
-.env
-
-# Prisma
-/prisma/data.db
-/prisma/data.db-journal
-
-# Tests
-/coverage
+/api/index.js
+/api/index.js.map
