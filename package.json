@@ -1,31 +1,43 @@
 {
   "name": "www-weekship",
+  "version": "0.0.1",
   "private": true,
+  "type": "module",
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
+    "build": "remix vite:build",
+    "dev:remix": "cross-env NODE_ENV=development remix watch",
+    "dev:server": "cross-env NODE_ENV=development node ./server.js",
+    "dev": "remix dev -c 'node ./server.js'",
+    "start": "cross-env NODE_ENV=production node ./server.js",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "^1.15.0",
-    "@remix-run/react": "^1.15.0",
-    "framer-motion": "^10.11.2",
-    "isbot": "^3.6.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@remix-run/express": "^2.9.2",
+    "@remix-run/node": "^2.9.2",
+    "@remix-run/react": "^2.9.2",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.19.2",
+    "framer-motion": "^11.2.10",
+    "isbot": "^3.8.0",
+    "morgan": "^1.10.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.2.13",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.15.0",
-    "@remix-run/eslint-config": "^1.15.0",
-    "@remix-run/serve": "^1.15.0",
-    "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
+    "@remix-run/dev": "^2.9.2",
+    "@remix-run/eslint-config": "^2.9.2",
+    "@remix-run/serve": "^2.9.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.38.0",
+    "eslint": "^8.57.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.0.4"
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": "v18.20.2"

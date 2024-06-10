@@ -1,0 +1,14 @@
+zerops:
+  - setup: weekship
+    build:
+      base: nodejs@20
+      buildCommands:
+        - pnpm i
+        - pnpm run build
+      deploy:
+        - build
+        - server.js
+        - package.json
+        - node_modules
+    run:
+      start: pnpm start
